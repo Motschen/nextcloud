@@ -1,0 +1,139 @@
+/* Use Mocha palette for dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        --color-main-background: #1e1e2e;
+        --color-main-background-rgb: 30, 30, 46;
+        --color-main-background-translucent: rgba(var(--color-main-background-rgb), .97);
+        --color-main-background-blur: rgba(var(--color-main-background-rgb), .8);
+        --color-background-hover: #313244;
+        --color-background-dark: #181825;
+        --color-background-dark-rgb: 24, 24, 37;
+        --color-background-dark-blur: rgba(var(--color-background-dark-rgb), .8);
+        --color-background-darker: #11111b;
+  
+        --color-main-text: #cdd6f4;
+        --color-text-light: #bac2de;
+        --color-text-lighter: #a6adc8;
+  
+        --color-scrollbar: #45475a;
+  
+        --color-error: #f38ba8;
+        --color-error-rgb: 243, 139, 168;
+        --color-error-hover: #d64b72;
+
+        --color-warning: #f9e2af;
+        --color-warning-rgb: 249, 226, 175;
+        --color-warning-hover: #dabe81;
+
+        --color-success: #a6e3a1;
+        --color-success-rgb: 166, 227, 161;
+        --color-success-hover: #7fc07b;
+
+        --color-info: #89b4fa;
+        --color-info-rgb: 137, 180, 250;
+        --color-info-hover: #5ea8fa;
+
+        --color-border: #313244;
+        --color-border-dark: #45475a;
+        --color-border-maxcontrast: #585b70;
+
+        --color-primary-element: #45475a;
+        --color-primary-element-rgb: 69, 71, 90;
+        --color-primary-element-hover: #313244;
+
+        --color-primary-element-text: #cdd6f4;
+
+        --color-primary-element-light: #313244;
+        --color-primary-element-light-rgb: 49, 50, 68;
+        --color-primary-element-light-hover: #181825;
+    }
+}
+/* Use Latte palette for light mode */
+@media (prefers-color-scheme: light) {
+    body {
+        --color-main-background: #eff1f5;
+        --color-main-background-rgb: 239, 241, 245;
+        --color-main-background-translucent: rgba(var(--color-main-background-rgb), .97);
+        --color-main-background-blur: rgba(var(--color-main-background-rgb), .8);
+        --color-background-hover: #ccd0da;
+        --color-background-dark: #e6e9ef;
+        --color-background-dark-rgb: 230, 233, 239;
+        --color-background-dark-blur: rgba(var(--color-background-dark-rgb), .8);
+        --color-background-darker: #dce0e8;
+  
+        --color-main-text: #4c4f69;
+        --color-text-light: #5c5f77;
+        --color-text-lighter: #6c6f85;
+  
+        --color-scrollbar: #bcc0cc;
+  
+        --color-error: #d20f39;
+        --color-error-rgb: 210, 15, 57;
+        --color-error-hover: #ac1132;
+
+        --color-warning: #df8e1d;
+        --color-warning-rgb: 223, 142, 29;
+        --color-warning-hover: #b6761a;
+
+        --color-success: #40a02b;
+        --color-success-rgb: 64, 160, 43;
+        --color-success-hover: #33701b;
+
+        --color-info: #1e66f5;
+        --color-info-rgb: 30, 102, 245;
+        --color-info-hover: #0f52c8;
+
+        --color-border: #ccd0da;
+        --color-border-dark: #bcc0cc;
+        --color-border-maxcontrast: #acb0be;
+
+        --color-primary-element: #bcc0cc;
+        --color-primary-element-rgb: 188, 192, 204;
+        --color-primary-element-hover: #a6adc8;
+
+        --color-primary-element-text: #4c4f69;
+
+        --color-primary-element-light: #ccd0da;
+        --color-primary-element-light-rgb: 204, 208, 218;
+        --color-primary-element-light-hover: #e6e9ef;
+    }
+}
+/* Fixes wrong title color in tasks app */
+.app-navigation-caption__title {
+    color: var(--color-main-text) !important; /* !important needed for theming apps */
+}
+/* Fixes wrong bubble text color in tasks and forms app */
+.counter-bubble__counter {
+    color: var(--color-primary-element-text) !important; /* !important needed for theming apps */
+}
+
+/* Fixes wrong title color in forms public view */
+.header-appname {
+    color: var(--color-main-text);
+}
+
+/* General eye-candy for forms public view */
+#body-public > #content-vue > #app-content-vue {
+    background-color: var(--color-background-dark-blur);
+    -webkit-backdrop-filter: var(--filter-background-blur);
+    backdrop-filter: var(--filter-background-blur);
+}
+body#body-public div#content-vue.content.app-forms main#app-content-vue.app-content.no-snapper.app-content--public form ul li.question {
+    border-radius: 14px;
+    background-color: var(--color-main-background-blur);
+    padding-inline-start: 18px;
+}
+@media (prefers-color-scheme: light) {
+    body#body-public div#content-vue.content.app-forms main#app-content-vue.app-content.no-snapper.app-content--public form ul li.question {
+        background-color: var(--color-main-background);
+    }
+}
+
+/* Fixes weird "shared by" text placement and color in forms public view */
+.header-shared-by {
+    color: var(--color-text-lighter);
+    position: absolute;
+    font-weight: 500;
+    font-size: 13px;
+    right: 15px;
+}
